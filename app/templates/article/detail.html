@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{article.article_title}}
+{% endblock %}
+
+{% block content %}
+<div class="news_detail_container">
+	<div class="news__head">
+		<div class="news__detail__title">
+			<p>{{article.article_title}}</p>
+		</div>
+		<div class="news__detail__text">
+			<p>{{article.article_text}}</p>
+		</div>
+	</div>
+	<div class="news__body">
+		<div class="news__detail_img">
+			<p><img src="{{ article.image.url }}" alt=""></p>
+		</div>
+	</div>
+	<div class="news__detail_bottom">
+		<div class="news__detail__autor">
+			<p>Автор: {{article.article_autor}}</p>
+		</div>
+		<div class="news__detail__date">
+			<em>Дата публикации: {{article.pub_data}}</em>
+		</div>
+	</div>
+</div>
+
+
+<hr>
+<div class="comment__list__container">
+	{% if lastest_comments_list %}
+	{% for comment in lastest_comments_list %}
+	<div class="comment__list__head">
+		<strong>
+			{{comment.autor_name}}
+		</strong>
+	</div>
+	<div class="comment__list__footer">
+		<p>
+			{{comment.comments_text}}
+		</p>
+	</div>
+	{% endfor %}
+	{% else %}
+	Нет комментариев. Станьте первым.
+	{% endif %}
+</div>
+
+{% if article.was_published_recently %}
+<p>Новая статья</p>
+{% endif %}
+<div class="form__comment__container">
+	<form action="{% url 'live_comment' article.id %}" method="POST">
+		{% csrf_token %}
+		<div class="form__comment__head">
+			<input type="text" required placeholder="Ваше имя" name='name' autocomplete="off">
+		</div>
+		<div class="form__comment__footer">
+			<textarea type="text" required placeholder="Текст комментария" name="text" maxlength='255'
+				minlength="10"></textarea>
+		</div>
+		<button class="form-contacts__btn btn btn_b" type="submit">Отправить</button>
+	</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,380 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>{% block title %} e989 {% endblock %}</title>
+	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+	<div class="wrapper">
+		<div class="mainblock" id="header">
+			<div class="mainblock__content">
+				<div class='container'>
+					<a href="/" class="mainblock__logo">
+						<img src="../media/logo989.png" alt="" />
+					</a>
+					<div class="mainblock__text">
+						<div class="mainblock__title">Сервис <span class="little__Letter">е989</span></div>
+						<div class="mainblock__subtitle"><br><a href="tel:89898293242"
+								style="color:white; font-weight:900">+7(989)829-32-42</a></div>
+					</div>
+					<div class="mainblock__footer">
+						<a href="tel:89898293242" class="mainblock__btn btn btn_w goto"><span>ПОЗВОНИТЬ</span></a>
+						<a href="#popup" class="mainblock__btn btn btn_w "><span>Проверить завяку Online</span></a>
+						<a href="#content" class="mainblock__arrow goto"><img src="../media/icons/arrow-down.png"
+								alt="" /></a>
+					</div>
+				</div>
+			</div>
+			<div class="mainblock__image ibg">
+				<img src="../media/mainblock/1328.png" alt="" />
+			</div>
+		</div>
+		<div class="content">
+			<div class="menu menu_mb">
+				<div class='container'>
+					<nav class="menu__items">
+						<ul class="menu__list">
+							<li><a href="/" class="menu__link">
+									ГЛАВНАЯ
+								</a></li>
+							<li><a href="#news" class="menu__link">НОВОСТИ</a></li>
+							<li><a href="#services" class="menu__link">УСЛУГИ</a></li>
+							<li><a href="#contact" class="menu__link">КОНТАКТЫ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class='container'>
+				<div class="about__header-block header-block">
+					<div class="header-block__title" id='news'>Наши новости</div>
+					{% block content %}
+					{% endblock %}
+				</div>
+			</div>
+			<div class="about">
+				<div class="container">
+					<div class="portfolio">
+						<div class='container'>
+							<div class="portfolio__header-block header-block">
+								<div class="header-block__title" id="services">Услуги</div>
+							</div>
+						</div>
+					</div>
+					<div class="about__body">
+						<div class="about__row">
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="../media/icons/256.png" alt="" />
+									</div>
+									<div class="about__title">Ремонт компьютеров</div>
+									<div class="about__text">Быстрый и качественный ремонт, любой сложности:
+										Компьютеров, Ноутбуков, Планшетов, Телефонов. Запчасти и комплектующие в
+										наличии.</div>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="../media/icons/257.png" alt="" />
+									</div>
+									<div class="about__title">Ремонт принтеров</div>
+									<div class="about__text">Быстрый и качественный ремонт, любой сложности: принтеров,
+										МФУ, и прочей оргтехники. Наши инжинеры - самые опытные в городе</div>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon about__icon_l">
+										<img src="../media/icons/258.png" alt="" />
+									</div>
+									<div class="about__title">Настройка программ</div>
+									<div class="about__text">Установка и настройка програмного обеспечения</div>
+								</div>
+							</div>
+						</div>
+						<div class="about__row">
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="../media/icons/259.png" alt="" />
+									</div>
+									<div class="about__title">Проведение локальной сети</div>
+									<div class="about__text">Создание локальных сетей любой сложности на Вашем
+										предприятии или в Вашем доме.</div>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="../media/icons/260.png" alt="" />
+									</div>
+									<div class="about__title">Установка видеонаблюдения</div>
+									<div class="about__text">Установим видеонаблюдение на вашем предприятии.</div>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="../media/icons/261.png" alt="" />
+									</div>
+									<div class="about__title">Заправка картриджей</div>
+									<div class="about__text">Заправляемые лазерные и струйные картриджи, с чипом и
+										без.Большинство тонеров всегда
+										в наличие</div>
+								</div>
+							</div>
+						</div>
+						<div class="about__row">
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="../media/icons/07.png" alt="" />
+									</div>
+									<div class="about__title">Гарантийный ремонт</div>
+									<div class="about__text">Создание локальных сетей любой сложности на Вашем
+										предприятии или в Вашем доме.</div>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="../media/icons/08.png" alt="" />
+									</div>
+									<div class="about__title">Ремонт телефонов</div>
+									<div class="about__text">Установим видеонаблюдение на вашем предприятии.</div>
+								</div>
+							</div>
+							<div class="about__column">
+								<div class="about__item">
+									<div class="about__icon">
+										<img src="../media/icons/09.png" alt="" />
+									</div>
+									<div class="about__title">Наклейка специальной защитной гидрогелевой плёнки</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="partners">
+				<div class='container'>
+					<div class="partners__title">Гарантийный ремонт</div>
+					<div class="partners__items">
+						<div class="partners__column">
+							<div class="partners__item">
+								<ul class="partners__ul">
+									<li class="partners__li"><a href="https://www.acer.com/ac/ru/RU/content/home"
+											target="_blank">Acer</a></li>
+									<li class="partners__li"><a href="https://www.aq.ru/" target="_blank">Aquerius</a>
+									</li>
+									<li class="partners__li"><a href="https://www.brother.ru/"
+											target="_blank">Brother</a></li>
+									<li class="partners__li"><a href="https://www.cyberpowersystems.com/"
+											target="_blank">CyberPower</a>
+									</li>
+									<li class="partners__li"><a href="https://defender.ru/" target="_blank">Defender</a>
+									</li>
+									<li class="partners__li"><a href="https://www.iek.ru/" target="_blank">IEK</a></li>
+									<li class="partners__li"><a href="http://www.krauler.ru/"
+											target="_blank">Krauler</a></li>
+									<li class="partners__li"><a href="https://kraftway.ru/" target="_blank">Kraftway</a>
+									</li>
+									<li class="partners__li"><a href="https://www.lexmark.com/"
+											target="_blank">Lexmark</a></li>
+									<li class="partners__li"><a href="https://microlab.ru/" target="_blank">Microlab</a>
+									</li>
+									<li class="partners__li"><a href="https://www.packardbell.com/index.html"
+											target="_blank">Packardbell</a></li>
+									<li class="partners__li"><a href="https://tdme.ru/" target="_blank">TDM Electric</a>
+									</li>
+									<li class="partners__li"><a href="https://tendacn.com/ru/default.html"
+											target="_blank">Tenda</a>
+									</li>
+									<li class="partners__li"><a href="https://www.depo.ru/" target="_blank">Depo</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!-- <div class="partners__column">
+							<div class="partners__item">
+								<img src="../media/partners/02.png" alt="" />
+							</div>
+						</div>
+						<div class="partners__column">
+							<div class="partners__item">
+								<img src="../media/partners/03.png" alt="" />
+							</div>
+						</div>
+						<div class="partners__column">
+							<div class="partners__item">
+								<img src="../media/partners/04.png" alt="" />
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+			<div class="contacts">
+				<div class='container'>
+					<div class="contacts__header-block header-block">
+						<div class="header-block__title" id="contact">КОНТАКТЫ</div>
+					</div>
+					<div class="contacts__body">
+						<div class="contacts__column">
+							<form name="form" id="form" class="contacts__form form-contacts"
+								enctype="multipart/form-data" method="POST">
+								{% csrf_token %}
+
+								<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="e989">
+								<input type="hidden" name="admin_email" value="ots.ru@mail.ru">
+								<input type="hidden" name="form_subject" value="Сообщене с сайта e989">
+								<!-- END Hidden Required Fields -->
+
+								<div class="form-contacts__body">
+									<div class="form-contacts__row">
+										<div class="form-contacts__column">
+											<div class="form-contacts__input">
+												<div class="form-contacts__label">ВАШЕ ИМЯ</div>
+												<input autocomplete="off" type="text" name="Name" data-value=""
+													class="input req" />
+											</div>
+										</div>
+										<div class="form-contacts__column">
+											<div class="form-contacts__input">
+												<div class="form-contacts__label">ВАШ E-MAIL</div>
+												<input autocomplete="off" type="text" name="E-mail" data-value=""
+													class="input req email" />
+											</div>
+										</div>
+									</div>
+									<div class="form-contacts__input">
+										<div class="form-contacts__label">СООБЩЕНИЕ</div>
+										<textarea autocomplete="off" name="form[]" data-value=""
+											class="input"></textarea>
+									</div>
+									<button type="submit"
+										class="form-contacts__btn btn btn_b"><span>ОТПРАВИТЬ</span></button>
+								</div>
+							</form>
+						</div>
+						<div class="contacts__column">
+							<div class="contacts__content">
+								<div class="contacts__text">Ваше оборудование в надёжных руках. Надёжность. Качество.
+									Гарантия.
+									<div class="mainblock__subtitle"><a href="tel:89898293242"
+											style="color:#000; font-weight:400; font-size: 20px;">+7(989)829-32-42</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="contacts__name">Сервисный центр е989</div>
+							<div class="contacts__social social">
+								<a href="https://www.facebook.com/sc.e989/" target="_blank" class="social__item"><img
+										src="../media/icons/social/01.svg" alt="" /></a>
+								<a href="https://www.instagram.com/servisnyicentr_e989/" target="_blank"
+									class="social__item"><img src="../media/icons/social/02.svg" alt="" /></a>
+								<a href="https://vk.com/yeisk_e989" target="_blank" class="social__item"><img
+										src="../media/icons/social/03.svg" alt="" /></a>
+								<a href="https://t.me/serv_e989" target="_blank" class="social__item"><img
+										src="../media/icons/social/04.svg" alt="" /></a>
+								<a href="https://ok.ru/group/58521454182514" target="_blank" class="social__item"><img
+										src="../media/icons/social/05.svg" alt="" /></a>
+							</div>
+							<div class="contacts__email">
+								e-mail: <a href="mailto:ots.ru@mail.ru">ots.ru@mail.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class='container'>
+			<div class="footer__body">
+				<a href="" class="logo_bottom"><img src="../media/logo989.png" alt="" /></a>
+				<nav class="footer__menu">
+					<ul class="footer__list ">
+						<li><a href="/" class="footer__link">Home</a></li>
+						<li><a href="https://www.facebook.com/sc.e989/" class="footer__link">Facebook</a></li>
+						<li><a href="https://www.instagram.com/servisnyicentr_e989/" class="footer__link">Instagram</a>
+						</li>
+						<li><a href="https://vk.com/yeisk_e989" class="footer__link">Vkontakte</a></li>
+						<li><a href="https://t.me/serv_e989" class="footer__link">Telegram</a></li>
+						<li><a href="https://ok.ru/group/58521454182514" class="footer__link">Одноклассники</a></li>
+					</ul>
+				</nav>
+				<div class="footer__text">© 2020. Все права защищены </div>
+			</div>
+		</div>
+	</footer>
+	</div>
+	<div class="popup" id="popup">
+		<div class="popup__body">
+			<div class="popup__content">
+				<a href="/" class="popup__close">X</a>
+				<div class="popup__title">
+					Проверить заявку Online
+				</div>
+				<div class="popup__text">
+					<div class="widgetmain">
+						<div id="livesklad-widget" class="widget">
+						</div>
+					</div>
+				</div>
+				</a>
+			</div>
+		</div>
+		<!-- LiveSklad Widget -->
+		<script type="text/javascript">
+			// Задаем параметры виджета при загрузке
+			window.liveskladOptions = {
+				// Ключ апи, индивидуально сгенерированный для вас
+				api_key: "tB5HIm77UqMixqIGFRaP",
+				// Название, отображаемое в заголовке виджета. По умолчанию: "Мои заказы"
+				title: "Мои заказы",
+				// Название, отображаемое в поле ввода текста. По умолчанию: "Номер телефона или заказа"
+				placeholder: "Номер телефона +7 или заказа",
+				// Название, отображаемое в поле проверки пользователя. По умолчанию: "Фамилия"
+				name_placeholder: "Фамилия",
+				// Текст на кнопке. По умолчанию: "Открыть заказы"
+				button_text: "Открыть заказы",
+				// Ширина окна. По умолчанию: "300px"
+				width: "100%",
+				// Высота окна. По умолчанию: "230px"
+				height: "220px",
+				// Цвет фона кнопки. Если его задать, эффект при наведении РАБОТАТЬ НЕ БУДЕТ!
+				color: "#4F76E6",
+				// Колонки в таблице заказов. По умолчанию: ["number", "device", "brand", "status", "price"],
+				// что соответствует:
+				// № Заказа | Тип устр. | Устройство | Статус | Цена
+				columns: ["number", "device", "brand", "status", "price"],
+				// Скрывать уже выданные заказы? По умолчанию: Скрывать (true)
+				hide_given: true,
+				// Указанная в виджете валюта
+				currency: "руб"
+			};
+			(function () {
+				var script = document.createElement('script');
+				script.type = 'text/javascript';
+				script.async = true;
+				script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') +
+					'my.livesklad.com/static/widget.js';
+				document.getElementsByTagName('head')[0].appendChild(script);
+			})();
+		</script>
+		<!-- /LiveSklad Widget -->
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"
+			integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+		<script src="../static/javaScript/vendors.js"></script>
+		<script src="../static/javaScript/main.js"></script>
+		<script src="../static/javaScript/custom.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+Главная страница | e989
+{% endblock %}
+
+{% block content %}
+{% if listArticlesObject %}
+<div class="container">
+	<div class="news__body">
+		<div class="news__row">
+			<div class="news__column">
+				
+					{% for article in listArticlesObject %}
+					<div class="news__item">
+					<div class="news__icon">
+						<a href="{% url 'detail' article.id %}">
+							<img src="{{ article.image.url }}" alt="">
+						</a>
+					</div>
+					<div class="new__title">
+						<a class="news_title" href="{% url 'detail' article.id %}">
+							{{article.article_title}}
+						</a>
+					</div>
+					</div>
+					{% endfor%}
+				
+			</div>
+		</div>
+	</div>
+</div>
+{% else %}
+Статьи не найдены
+{% endif %}
+{% endblock %}
